@@ -9,6 +9,6 @@ for directory in "${directories[@]}"
 do
   dir_to_copy="$user_dir/$directory"
   tar_destination=$backup_volume/$directory.gz
-  tar cf - "$dir_to_copy" -P | pv -s "$(du -sb "$dir_to_copy" | awk '{print $1}')" | gzip > "$tar_destination"
+  tar -czvf "$tar_destination" "$dir_to_copy"
   echo "Copying $dir_to_copy to $tar_destination"
 done
