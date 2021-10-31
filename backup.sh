@@ -1,7 +1,7 @@
 #!/bin/bash
 
 backup_volume=$2
-user_dir="/Volumes/Macintosh\ HD/Users/$1"
+user_dir="/Volumes/Macintosh HD/Users/$1"
 
 directories=( "Documents" "Downloads" "Desktop" "Movies" "Music" "Pictures" "Public" )
 
